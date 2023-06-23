@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Začínáme hrát</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="pozadi">
+  <nav class="navbar navbar-expand-lg navbar-light custom_navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand animation" href="../index.html"><img src="../img/travovy_blok_logo.png"
+          alt="Blok trávy v Minecraftu" width="70" height="65"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link navbar_rozcestnik" href="index.html">Pro začátečníky</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="../tipy_a_triky/index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Užitečné tipy a triky</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../zajimavosti/index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Zajímavosti</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="../kviz_minecraft/index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Herní kvíz</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" style="color: #292929;
+              font-family: 'Noto Sans', sans-serif;
+              font-size: 95%;">
+              <strong>O webu</strong>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="../autor/index.html" style="color: #292929;
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 95%;">Autor</a></li>
+              <li><a class="dropdown-item" href="../autorska_prava/index.html" style="color: #292929;
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 95%;">Autorská práva</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="page-header gradient">
+    <div class="container pt-5 pb-3">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-md-6">
+          <h2 class="nadpisy_stranek animace-vlevo">Začínáme!</h2>
+          <p class="animace_vlevo">Tato sekce je věnována pro úplné začátečníky. Ukážeme si zde, jak vytvořit svět,
+            uděláte si základní nástroje a přežijete svoji první noc.</p>
+        </div>
+        <div class="col-md-6"><img src="../img/steve.png" alt="Steve" class="animace_vpravo"></div>
+      </div>
+    </div>
+  </header>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#545454" fill-opacity="10%"
+      d="M0,256L0,96L144,96L144,64L288,64L288,192L432,192L432,128L576,128L576,256L720,256L720,224L864,224L864,192L1008,192L1008,96L1152,96L1152,192L1296,192L1296,32L1440,32L1440,0L1296,0L1296,0L1152,0L1152,0L1008,0L1008,0L864,0L864,0L720,0L720,0L576,0L576,0L432,0L432,0L288,0L288,0L144,0L144,0L0,0L0,0Z">
+    </path>
+  </svg>
+
+
+  <div style="height: 50px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 id="title-animation" class="text_animation" style="
+              font-family: Roboto-Slab, sans-serif;
+              font-weight: 700;
+              font-size: 250%;
+              text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);
+            ">
+          Spuštění Minecraftu
+        </h2>
+        <p class="text_animation text_effect text-animation">
+          Po spuštění Minecraftu nejspíše uvidíte něco takového. Klikněte na
+          "<strong>Instalace</strong>" > "<strong>Nová instalace</strong>" >
+          Zvolte libovolný <strong>název</strong> a
+          <strong>verzi hry</strong> (doporučuji nechat nejnovější
+          <strong>1.20</strong>). Stiskněte tlačítko "<strong>Hrát</strong>" a
+          čekejte, než se vámi zvolená verze <strong>nainstaluje</strong>.
+          Poté budete uvedeni do <strong>hlavního menu hry</strong>.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../img/uvodi_menu_hry.jpg" alt="Úvodní menu hry Minecraft" class="img-fluid image_blur">
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="../img/hlavni_menu.jpg" alt="Hlavní menu Minecraftu" class="img-fluid image_blur">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation" style="
+              font-family: Roboto-Slab, sans-serif;
+              font-weight: 700;
+              font-size: 250%;
+              text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);
+              text-align: right;
+            ">
+          Váš první svět
+        </h2>
+        <p style="text-align: right" class="text_animation text_effect text-animation">
+          Takhle vypadá hlavní menu hry. Klikněte na
+          "<strong>Singleplayer</strong>" neboli hru pro
+          <strong>jednoho hráče</strong> > Poté klikněte na "<strong>Create New World</strong>" ("<strong>Vytvořit nový
+            svět</strong>"). Svůj
+          <strong>nový</strong> svět pojmenujte <strong>dle libosti</strong>,
+          nebo můžete nechat "<strong>New World</strong>" > Obtížnost nechte
+          na "<strong>Normal</strong>", což je normální obtížnost hry > Herní
+          režim nechte na "<strong>Survival</strong>"
+          ("<strong>Přežití</strong>") > Znovu klikněte na "<strong>Create New World</strong>". Teď už stačí jen
+          <strong>počkat</strong>, až se <strong>svět vygeneruje</strong>.
+        </p>
+        <p style="text-align: right" class="text_animation text_effect text-animation">
+          <strong>Rychlost</strong> generace světa závisí na vašem
+          <strong>disku a grafické kartě</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation" style="
+              font-family: Roboto-Slab, sans-serif;
+              font-weight: 700;
+              font-size: 250%;
+              text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);
+            ">
+          Začínáme hrát!
+        </h2>
+        <p class="text_animation text_effect text-animation">
+          Po <strong>vytvoření</strong> a následném <strong>spuštění</strong> světa se objevíte na zcela
+          <strong>náhodném místě</strong> v přírodě nebo vesnici. Jelikož jste si ale nastavili
+          režim "<strong>Survival</strong>" ("<strong>Přežití</strong>"), budete muset v tomto světě
+          <strong>přežít</strong>.
+          <strong>Druhů smrtí</strong> je spousta, od např. <strong>vyhladovění</strong>, <strong>utopení</strong>,
+          <strong>uhoření</strong>, ale
+          taky třeba <strong>zastřelení</strong> šípem <strong>nepřáteského kostlivce</strong>. Proto buďte
+          velmi <strong>opatrní</strong>.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../img/minecraft_start.jpg" alt="Vygenerování nového světa v Minecraftu" class="img-fluid image_blur">
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="../img/kaceni_dreva.jpg" alt="Kácení dřeva v Minecraftu" class="img-fluid image_blur">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation" style="
+              font-family: Roboto-Slab, sans-serif;
+              font-weight: 700;
+              font-size: 250%;
+              text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);
+              text-align: right;
+            ">
+          Kácení dřeva
+        </h2>
+        <p style="text-align: right" class="text_animation text_effect text-animation">
+          Začněte věcí, která se při vytvoření nového světa dělá většinou jako
+          <strong>první</strong>, a to je <strong>těžba dřeva</strong>. Jděte k <strong>nejbližšímu prvnímu
+            stromu</strong>,
+          který uvidíte, namiřte <strong>kurzorem</strong> na kmen, držte <strong>levé tlačítko myši</strong> a
+          čekejte, než vám vypadne <strong>surový kmen</strong>. Ano, můžete těžit holou rukou
+          :) Takle pokácejte asi <strong>20 polen</strong>. Je to sice velmi <strong>pomalé</strong>, ale díky
+          toho si později můžeme vyrobit např. <strong>sekeru</strong>, která těžbu výrazně
+          urychlí.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation" style="
+              font-family: Roboto-Slab, sans-serif;
+              font-weight: 700;
+              font-size: 225%;
+              text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);
+            ">
+          Základní nástroje
+        </h2>
+        <p class="text_animation text_effect text-animation">
+          Otevřete svůj <strong>inventář</strong> pomocí klávesy "<strong>E</strong>" (jesliže nemáte nastaveno
+          jinak) a do <strong>4 hranatých políček</strong> umístěte kus vámi pokáceného dřeva,
+          tím si vyrobíte <strong>4 opracované desky</strong>. Tyto 4 desky vložte znovu do
+          všech 4 políček a vytvoříte tzv. <strong>crafting table</strong> (<strong>vyráběcí stůl</strong>), což
+          je pravděpodobně <strong>nejdůležitější věc</strong> v celém Minecraftu, bez které
+          byste se jen velmi <strong>těžko</strong> obešli, pokud teda chcete něco dělat a ne se jen
+          <strong>bezmyšlenkovitě toulat</strong> světem.
+        </p>
+        <p class="text_animation text_effect text-animation">
+          Poté položte crafing table kdekoli na zem a klikněte na něj <strong>pravým
+            tlačítkem</strong>. Jak vidíte, teď máte místo 4 políček <strong>políček 9</strong>! Můžete
+          tak tvořit mnohem <strong>složitější</strong> věci, jako například <strong>maják</strong>. Tímto se
+          ale v tomto tutoriálu nebudeme zabývat.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../img/prvni_vyrabeni.jpg" alt="Výroba crafting table" class="img-fluid image_blur">
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="../img/crafting_recepty.jpg" alt="Crafting recepty 4 základních dřevěných nástrojů"
+          class="img-fluid image_blur image-animation">
+      </div>
+      <div class="col-md-6">
+        <p class="text_animation text_effect">
+          Podle vzoru <strong>nalevo</strong> si v crafting table vyrobte <strong>set základních
+            dřevěných nástrojů</strong>:
+        </p>
+        <p class="text_animation text_effect text-animation">
+          <u>Krumpáč</u> - používá se na těžbu <strong>kamenů</strong> a <strong>vzácných nerostů</strong> <br>
+          <u>Lopata</u> - používá se na těžbu <strong>hlíny</strong>, <strong>písku</strong> a jiných měkkých/sypkých
+          materiálů <br>
+          <u>Sekera</u> - díky ní budete sekat dřevo <strong>mnohem rychleji</strong>, lze s ní i
+          <strong>bojovat</strong> <br>
+          <u>Meč</u> - slouží k <strong>boji proti nepřátelským monstrům</strong>, kterých je v
+          Minecraftu <strong>hodně</strong>
+        </p>
+        <p class="text_animation text_effect text-animation">
+          Jakmile budete mít vyrobené všechny základní nástroje, hned si je
+          <strong>vyzkoušejte</strong>. <strong>Pokácejte</strong> pár stromů, <strong>natěžte</strong> si kámen,
+          <strong>pobijte</strong> pár
+          zvířat pro <strong>maso</strong>.. dle vaší libosti!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation" style="
+              font-family: Roboto-Slab, sans-serif;
+              font-weight: 700;
+              font-size: 225%;
+              text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);
+            ">
+          Výroba postele
+        </h2>
+        <p id="text-animation" class="text_animation text_effect">
+          Pokud se dobře rozhlédnete <strong>kolem sebe</strong>, určitě narazíte na nějaké
+          <strong>ovce</strong>. Vezměte do ruky svůj <strong>meč</strong> a minimálně <strong>3 ovce pobijte</strong>.
+          Získáte z
+          nich <strong>jehněčí maso</strong>, které je důležité, abyste neumřeli hlady a <strong>vlnu</strong>,
+          která se používá na výrobu <strong>postele</strong>, která je <strong>velmi důležitá</strong>,
+          protože díky ní můžete <strong>přeskočit celou noc</strong> a zabránit tak <strong>spawnování</strong>
+          (<strong>rození se</strong>) nepřátelských <strong>mobů</strong> (název pro <strong>všechna NPC</strong> v
+          Minecraftu),
+          kteří se objevují <strong>za tmy</strong>.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../img/vyroba_postele.jpg" alt="Výroba postele v Minecraftu" class="img-fluid image_blur">
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="../img/stavba_domu.jpg" alt="Stavba dřevěné boudy v Minecraftu" class="img-fluid image_blur">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation" style="
+              font-family: Roboto-Slab, sans-serif;
+              font-weight: 700;
+              font-size: 225%;
+              text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);
+            ">
+          Stavba domu
+        </h2>
+        <p class="text_animation text_effect text-animation">
+          Máte natěženo <strong>plno bloků</strong>, proto si budete muset postavit <strong>základnu</strong>,
+          abyste <strong>přežili noc</strong>. Na základnu teoreticky <strong>nepotřebujete</strong> žádná
+          <strong>okna</strong>,
+          takže to může být fakt jenom <strong>obyčejná bouda</strong>. Důležité je, aby vám
+          tam <strong>nepronikla</strong> žádná <strong>monstra</strong>. Postavte si jednoduchou boudu <strong>3x3x3
+            bloky</strong>, jak vidíte na obrázku <strong>vlevo</strong>. Do tohoto prozatímního domu si
+          přeneste všechny <strong>důležité věci</strong> např. <strong>postel</strong>, <strong>crafting
+            table</strong>. Můžete
+          si klidně udělat <strong>díry pro okna</strong>, ale pozor na nepřátele, kteří vás
+          přes tyto díry mohou <strong>spatřit a zaútočit</strong>. Ještě si udělejte pomocí <strong>6
+            libovolných dřevěných desek</strong> sestavených do stojícího obdélníka <strong>dveře</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation" style="
+              font-family: Roboto-Slab, sans-serif;
+              font-weight: 700;
+              font-size: 225%;
+              text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);
+            ">
+          Osvětlení
+        </h2>
+        <p class="text_animation text_effect text-animation">
+          Dále budete potřebovat nějaké <strong>osvětlení</strong>. Nejběžnější osvětlení v
+          Minecraftu nejsou lampy, ale <strong>pochodně</strong>. Ty se vyrábějí velmi
+          jednoduše - <strong>tyčka</strong> a jeden <strong>uhlík</strong> vám dají <strong>4 pochodně</strong>. Uhlí
+          můžete
+          najít kdekoli v <strong>jeskyni</strong> nebo dokonce <strong>na povrchu</strong>, je to <strong>nejběžnější
+            ruda</strong> v <strong>Overworldu</strong> (klasickém světě). Vytěžíte ho <strong>kterýmkoli
+            krumpáčem</strong>.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../img/tezba_uhli.jpg" alt="Těžení uhlí pomocí krumpáče" class="img-fluid image_blur">
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="../img/osvetleni_zakladny.jpg" alt="Osvětlení základny pomocí pochodní"
+          class="img-fluid image_blur image-animation">
+      </div>
+      <div class="col-md-6">
+        <p class="text_animation text_effect text-animation">
+          Udělejte si pár pochodní a <strong>rozmístěte je</strong> ve svém <strong>domě</strong> a
+          <strong>okolí</strong> dle
+          potřeby. Tím <strong>zabráníte</strong> spawnování nepřátel. Hotovo! Nyní váš dům
+          není tak temný! Teď si můžete po namáhavém dni <strong>lehnout do postele</strong>,
+          čímž <strong>přeskočíte</strong> celou minecraftovou noc, která stejně jako
+          minecraftový den trvá asi <strong>10 minut</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="text_animation text_effect text-animation">
+          Tímto jste <strong>přežili svoji první noc</strong>, gratuluji! Můžete se vydat na
+          <strong>průzkum okolí</strong>, <strong>farmařit</strong>, <strong>sbírat různé předměty</strong>, které
+          naleznete..
+          zkrátka co jen si zamanete! Samozřejmě vám tady neporadím <strong>úplně se
+            vším</strong>, tahle stránka slouží pouze pro <strong>úplné začátečníky</strong>, kteří se s
+          hrou <strong>nikdy</strong> nesetkali. Níže vám proto přiložím pár <strong>odkazů</strong> na videa
+          různých <strong>tvůrců</strong>, kteří vám určitě poradí mnohem <strong>podrobnější věci</strong>!
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../img/preziti_prvni_noci.jpg" alt="Přežití první noci v Minecraftu" class="img-fluid image_blur">
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 150px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+
+
+        <ol class="text_animation text_effect text-animation">
+          <li><strong>Kompletní Minecraft příručka pro rok 2023</strong>: <a href="https://youtu.be/wrXkC6jF-J0"
+              target="_blank">https://youtu.be/wrXkC6jF-J0</a></li>
+          <li><strong>Jak začít hrát Minecraft</strong>: <a href="https://youtu.be/ADU1ycprBg4"
+              target="_blank">https://youtu.be/ADU1ycprBg4</a></li>
+          <li><strong>25 tipů, které by měl každý znát</strong>: <a href="https://youtu.be/y48J-G17fy8"
+              target="_blank">https://youtu.be/y48J-G17fy8</a></li>
+        </ol>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 65px"></div>
+
+  <footer class="text-center text-white fixed-bottom" style="
+        background: rgb(117, 117, 120);
+        background: radial-gradient(
+          circle,
+          rgba(117, 117, 120, 1) 0%,
+          rgba(84, 84, 84, 1) 86%
+        );
+      ">
+    <div class="text-center p-2">© PanVat 2023</div>
+  </footer>
+
+
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Script pro animaci -->>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const containers = document.querySelectorAll(".container");
+
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const title = entry.target.querySelector(".text_animation");
+            const image = entry.target.querySelector(".image_blur");
+            const texts = entry.target.querySelectorAll(".text_effect");
+
+            title.classList.add("anim-left");
+            image.classList.add("anim-right");
+            texts.forEach(function (text) {
+              text.classList.add("anim-left");
+            });
+          } else {
+            const title = entry.target.querySelector(".text_animation");
+            const image = entry.target.querySelector(".image_blur");
+            const texts = entry.target.querySelectorAll(".text_effect");
+
+            title.classList.remove("anim-left");
+            image.classList.remove("anim-right");
+            texts.forEach(function (text) {
+              text.classList.remove("anim-left");
+            });
+          }
+        });
+      }, options);
+
+      containers.forEach(function (container) {
+        observer.observe(container);
+      });
+    });
+  </script>
+
+  <!--Animace headeru-->>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const title = document.querySelector(".nadpisy_stranek");
+      const text = document.querySelector(".animace_vlevo");
+      const image = document.querySelector(".animace_vpravo");
+
+      title.style.opacity = 0;
+      text.style.opacity = 0;
+      image.style.opacity = 0;
+
+      const fadeIn = function (element) {
+        let op = 0.1; // starting opacity
+        const timer = setInterval(function () {
+          if (op >= 1) {
+            clearInterval(timer);
+          }
+          element.style.opacity = op;
+          element.style.filter = "alpha(opacity=" + op * 100 + ")";
+          op += op * 0.1;
+        }, 10);
+      };
+
+      fadeIn(title);
+      setTimeout(function () {
+        fadeIn(text);
+      }, 500);
+      setTimeout(function () {
+        fadeIn(image);
+      }, 1000);
+    });
+  </script>
+
+</body>
+
+</html>

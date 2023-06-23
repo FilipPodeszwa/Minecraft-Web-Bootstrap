@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Úvodní stránka</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body class="pozadi">
+  <nav class="navbar navbar-expand-lg navbar-light custom_navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand animation" href="index.html"><img src="img/travovy_blok_logo.png"
+          alt="Blok trávy v Minecraftu" width="70" height="65"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="pro_zacatecniky/index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Pro začátečníky</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="tipy_a_triky/index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Užitečné tipy a triky</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="zajimavosti/index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Zajímavosti</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="kviz_minecraft/index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Herní kvíz</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" style="color: #292929;
+              font-family: 'Noto Sans', sans-serif;
+              font-size: 95%;">
+              <strong>O webu</strong>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="autor/index.html" style="color: #292929;
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 95%;">Autor</a></li>
+              <li><a class="dropdown-item" href="autorska_prava/index.html" style="color: #292929;
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 95%;">Autorská práva</a></li>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header gradient">
+    <div class="container pt-5 pb-3">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-md-6">
+          <h2 class="nadpisy_stranek animace-vlevo">Úvod</h2>
+          <p class="animace_vlevo">Zde vám představím samotnou hru, přesvědčím vás, proč byste si ji mohli koupit, něco
+            o systémových požadavcích a nakonec si uděláme samotnou instalaci!</p>
+        </div>
+        <div class="col-md-6"><img src="img/steve.png" alt="Steve" class="animace_vpravo"></div>
+      </div>
+    </div>
+  </header>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#545454" fill-opacity="10%"
+      d="M0,256L0,96L144,96L144,64L288,64L288,192L432,192L432,128L576,128L576,256L720,256L720,224L864,224L864,192L1008,192L1008,96L1152,96L1152,192L1296,192L1296,32L1440,32L1440,0L1296,0L1296,0L1152,0L1152,0L1008,0L1008,0L864,0L864,0L720,0L720,0L576,0L576,0L432,0L432,0L288,0L288,0L144,0L144,0L0,0L0,0Z">
+    </path>
+  </svg>
+
+  <div style="height: 50px;"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 id="title-animation" class="text_animation"
+          style="font-family: Roboto-Slab, sans-serif; font-weight: 700; font-size: 250%; text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);">
+          Co je to Minecraft?
+        </h2>
+        <p id="text-animation" class="text_animation text_effect">Je to <strong>sandboxová počítačová hra</strong> (tj.
+          hráč si může dělat, co chce, není nějak omezen), kterou vytvořil švédský vývojář <strong>Markus
+            Persson</strong> a později ji převzala společnost <i>Mojang</i>. Byla poprvé vydána v roce
+          <strong>2011</strong> a od té doby se stala jednou z <strong>nejpopulárnějších her na světě</strong>.
+        </p>
+        <p id="text-effect" class="text_animation text_effect">Minecraft nabízí otevřený svět, ve kterém si hráči mohou
+          <strong>tvořit a stavět</strong> různé objekty a konstrukce pomocí bloků a různých materiálů. Hra je postavena
+          na <strong>pixelové</strong> grafice a nabízí prostředí, které je <strong>generováno náhodně</strong>, což
+          znamená, že každý herní svět je <strong>unikátní</strong>.
+        </p>
+        <p id="text-effect2" class="text_animation text_effect">Hráči mají možnost prozkoumávat herní svět, sbírat
+          suroviny, vyrábět nástroje a stavět různé struktury. Hra kombinuje prvky <strong>tvořivosti</strong>,
+          <strong>průzkumu</strong>, <strong>stavebnictví</strong> a <strong>bojování s nepřáteli</strong>.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img id="image-animation" src="img/minecraft_logo.jpg" alt="Hlavní logo hry Minecraft"
+          class="img-fluid image_blur">
+      </div>
+    </div>
+  </div>
+
+
+  <div style="height: 150px;"></div>
+
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="img/minecraft_mesto.jpg" alt="Město postavené v Minecraftu"
+          class="img-fluid image_blur image-animation">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation"
+          style="font-family: Roboto-Slab, sans-serif; font-weight: 700; font-size: 250%; text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438); text-align: right;">
+          Komunita</h2>
+        <p style="text-align: right;" class="text_animation text_effect">Komunita Minecraftu je <strong>aktivní a plná
+            kreativních
+            hráčů</strong>. Hráči
+          spolupracují na
+          obrovských <strong>stavbách a projektech</strong>, jako například skutečná místa z reality přestavěná do
+          Minecraftu. Hráči
+          hrají na <strong>multiplayerových serverech</strong> různé minihry nebo spolu bojují. Tyto servery jsou
+          <strong>veřejné</strong>, mohou ale být
+          i <strong>soukromé</strong>.
+        </p>
+        <p style="text-align: right;" class="text_animation text_effect">Taky zde existuje nesčetné množství kreativních
+          lidí, jako
+          například <strong>streameři</strong> a
+          <strong>tvůrci videí</strong>,
+          kteří sdílejí své herní zážitky na sociální sítě. Dokonce jsou tu i lidé, kteří vytvářejí
+          <strong>modifikace</strong>, které
+          hru vylepšují, např. změna celkové textury nebo přidání <strong>funkcí</strong>, které <strong>zcela
+            mění</strong> původní mechaniku hry.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="height: 150px;"></div>
+
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation"
+          style="font-family: Roboto-Slab, sans-serif; font-weight: 700; font-size: 250%; text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);">
+          Kompatibilita</h2>
+        <ol class="text_animation text_effect text-animation">
+          <li class="text_effect">Platformy</li>
+
+          <li><strong>Windows</strong>: <i>Windows 11, 10, 8, 7</i> a starší</li>
+          <li><strong>Mac</strong>: <i>macOS 10.14 (Mojave)</i> a novější</li>
+          <li><strong>Linux</strong>: <i>Ubuntu, Debian, Fedora, Arch Linux</i></li>
+
+
+          <li class="text_effect">Zařízení</li>
+
+          <li><strong>Počítače</strong>, <strong>laptopy</strong> a <strong>macbooky</strong></li>
+          <li><strong>Herní konzole</strong> (<i>PlayStation, Xbox, Nintendo</i> atd.)</li>
+          <li><strong>Mobily</strong> se systémem <i>Android, iOS</i> atd.</li>
+          <li><strong>Virtuální realita</strong> (<i>Oculus, Windows Mixed</i> atd.)</li>
+
+        </ol>
+        <p class="text_animation text_effect text-animation">Toto je pouze <strong>základní seznam</strong>,
+          existuje samozřejmě <strong>mnohem
+            víc</strong> platforem, kde hra poběží
+          bez problémů.</p>
+
+      </div>
+      <div class="col-md-6">
+        <img src="img/minecraft_ps4.jpg" alt="PlayStation 4 v Minecraftu" class="img-fluid image_blur image-animation">
+      </div>
+    </div>
+  </div>
+
+
+  <div style="height: 150px;"></div>
+
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="img/minecraft_logo_2.jpg" alt="Steve bojující s kostlivcem v Minecraftu"
+          class="img-fluid image_blur image-animation">
+      </div>
+      <div class="col-md-6" style="text-align: right;">
+        <h2 class="text_animation title-animation"
+          style="font-family: Roboto-Slab, sans-serif; font-weight: 700; font-size: 250%; text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438); text-align: right;">
+          Proč si koupit Minecraft?</h2>
+        <p class="text_animation text_effect text-animation">
+          > můžete tvořit a stavět <strong>vlastní světy</strong>, <strong>budovy</strong> a <strong>konstrukce</strong>
+          podle <strong>svých představ</strong></p>
+        <p class="text_animation text_effect text-animation">
+          > můžete se vydat na <strong>dobrodružství</strong>, hledat <strong>ukryté poklady</strong> a <strong>bojovat
+            s monstry</strong></p>
+        <p class="text_animation text_effect text-animation">
+          > možnost <strong>hrát s kamarády</strong> nebo se připojit k <strong>online komunitě hráčů</strong></p>
+        <p class="text_animation text_effect text-animation">
+          > hru si můžete <strong>přizpůsobit</strong> pomocí různých vytvořených <strong>modifikací</strong></p>
+        <p class="text_animation text_effect text-animation">
+          > hra podporuje <strong>kreativitu</strong>, <strong>logické myšlení</strong> a <strong>problémové
+            řešení</strong>, <strong>vzdělávací hodnota</strong></p>
+        <p class="text_animation text_effect text-animation">
+          > je velmi často <strong>aktualizován</strong>, jsou <strong>opravovány chyby</strong> a přidávány
+          <strong>nové věci</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="height: 150px;"></div>
+
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation"
+          style="font-family: Roboto-Slab, sans-serif; font-weight: 700; font-size: 225%; text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);">
+          Minimální systémové požadavky</h2>
+
+        <ul class="text_animation text_effect">
+          <li class="text_effect"><u>Procesor</u>: <strong>Intel Core i3 3210</strong> | <strong>AMD A8 7600
+              APU</strong> nebo podobný</li>
+        </ul>
+
+        <ul class="text_animation text_effect text-animation">
+          <li class="text_effect"><u>RAM</u>: <strong>4 GB</strong></li>
+        </ul>
+
+        <ul class="text_animation text_effect text-animation">
+          <li class="text_effect"><u>Disk</u>: <strong>1 GB</strong> volného místa</li>
+        </ul>
+
+        <ul class="text_animation text_effect text-animation">
+          <li class="text_effect"><u>Grafická karta</u>: <strong>Intel HD Graphics 4000</strong> nebo <strong>AMD
+              Radeon
+              R5 series</strong></li>
+        </ul>
+
+        <ul class="text_animation text_effect text-animation">
+          <li class="text_effect"><u>Operační systém</u>: <strong>64bitový Windows 7</strong> nebo novější</li>
+        </ul>
+
+        <ul class="text_animation text_effect text-animation">
+          <li class="text_effect"><u>Rozlišení obrazovky</u>: <strong>1024 x 768</strong> nebo lepší</li>
+        </ul>
+
+      </div>
+      <div class="col-md-6">
+        <img src="img/minimalni_pozadavky.jpg" alt="Hrac v Netheru" class="img-fluid image_blur image-animation">
+      </div>
+    </div>
+  </div>
+
+
+  <div style="height: 150px;"></div>
+
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation"
+          style="font-family: Roboto-Slab, sans-serif; font-weight: 700; font-size: 225%; text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438);">
+          Systémové požadavky pro RTX</h2>
+
+        <ul class="text_animation text_effect text-animation">
+          <li class="text_effect"><u>Procesor</u>: <strong>Intel Core i5</strong> | <strong>AMD Ryzen 5</strong> nebo
+            podobné</li>
+        </ul>
+
+        <ul class="text_animation text_effect text-animation">
+          <li class="text_effect"><u>RAM</u>: <strong>8 GB</strong> a víc</li>
+        </ul>
+
+        <ul class="text_animation text_effect text-animation">
+          <li class="text_effect"><u>Disk</u>: <strong>1 GB</strong> volného místa</li>
+        </ul>
+
+        <ul class="text_animation text_effect text-animation">
+          <li class="text_effect"><u>Grafická karta</u>: <strong>RTX 20 Series</strong> | <strong>RX 6000</strong>
+            nebo
+            novější</li>
+        </ul>
+
+        <ul class="text_animation text_effect">
+          <li class="text_effect"><u>Operační systém</u>: <strong>64bitový Windows 10</strong> nebo novější</li>
+        </ul>
+
+        <ul class="text_animation text_effect">
+          <li class="text_effect"><u>Verze Minecraftu</u>: <strong>1.16.2</strong> nebo vyšší</li>
+        </ul>
+
+      </div>
+      <div class="col-md-6">
+        <img src="img/pozadavky_pro_rtx.jpg" alt="Minecraft v RTX" class="img-fluid image_blur image-animation">
+      </div>
+    </div>
+  </div>
+
+
+  <div style="height: 150px;"></div>
+
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="text_animation title-animation"
+          style="font-family: Roboto-Slab, sans-serif; font-weight: 700; font-size: 250%; text-shadow: 2px 2px 2px rgba(80, 77, 77, 0.438); text-align: center">
+          Instalace
+        </h2>
+        <p style="font-size: 105%; text-align:left" class="text_animation text_effect text-animation">
+          V případě, že váš počítač <strong>splňuje minimální požadavky</strong>, jež jsou vypsány výše, můžete si
+          Minecraft
+          <strong>nainstalovat</strong>! Jen bych chtěl podotknout, že stahujeme pouze z <strong>OFICIÁLNÍCH
+            STRÁNEK</strong>, abychom si nezavirovali
+          počítač :) Instalujte pomocí <strong>malého návodu</strong>, který jsem pro vás připravil:
+        </p><br>
+        <ol class="text_animation text_effect text-animation">
+          <li>Přejděte na stránku <a href="minecraft.net"><strong>minecraft.net</strong>.</a>
+          <li>Klikněte na tlačítko "<strong>Get Minecraft</strong>" a zvolte své <strong>zařízení</strong>.</li>
+          <li>Poté zvolte edici za <strong>$29.99</strong>.</li>
+          <li><strong>Přihlaste se</strong> nebo si <strong>vytvořte účet Microsoft</strong>.</li>
+          <li>Proveďte <strong>platbu</strong>.</li>
+          <li>Klikněte na "<strong>Nainstalovat</strong>".</li>
+          <li>Nainstalujte Minecraft a <strong>přihlaste se</strong> do něj pomocí <strong>účtu Microsoft</strong>.</li>
+        </ol>
+        <p style="font-size: 115%; text-align:left" class="text_animation text_effect text-animation">
+          A hurá, můžete začít hrát!
+        </p><br>
+      </div>
+      <div class="col-md-6 text-center">
+
+        <img src="img/hlavni_stranka_minecraftu.jpg" alt="Hlavní stránka Minecraftu"
+          class="img-fluid image_blur image-animation" style="max-width: 100%; height: auto;">
+
+
+      </div>
+    </div>
+  </div>
+  <div style="height: 65px"></div>
+
+  <footer class="text-center text-white fixed-bottom" style="background: rgb(117, 117, 120);
+  background: radial-gradient(circle, rgba(117, 117, 120, 1) 0%,
+          rgba(84, 84, 84, 1) 86%);">
+
+    <div class="text-center p-2">
+      © PanVat 2023
+
+    </div>
+
+  </footer>
+
+  <div style="height: 50px;"></div>
+
+  <!-- Script pro animaci -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const containers = document.querySelectorAll(".container");
+
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const title = entry.target.querySelector(".text_animation");
+            const image = entry.target.querySelector(".image_blur");
+            const texts = entry.target.querySelectorAll(".text_effect");
+
+            title.classList.add("anim-left");
+            image.classList.add("anim-right");
+            texts.forEach(function (text) {
+              text.classList.add("anim-left");
+            });
+          } else {
+            const title = entry.target.querySelector(".text_animation");
+            const image = entry.target.querySelector(".image_blur");
+            const texts = entry.target.querySelectorAll(".text_effect");
+
+            title.classList.remove("anim-left");
+            image.classList.remove("anim-right");
+            texts.forEach(function (text) {
+              text.classList.remove("anim-left");
+            });
+          }
+        });
+      }, options);
+
+      containers.forEach(function (container) {
+        observer.observe(container);
+      });
+    });
+  </script>
+
+  <!--Animace headeru-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const title = document.querySelector(".nadpisy_stranek");
+      const text = document.querySelector(".animace_vlevo");
+      const image = document.querySelector(".animace_vpravo");
+
+      title.style.opacity = 0;
+      text.style.opacity = 0;
+      image.style.opacity = 0;
+
+      const fadeIn = function (element) {
+        let op = 0.1; // starting opacity
+        const timer = setInterval(function () {
+          if (op >= 1) {
+            clearInterval(timer);
+          }
+          element.style.opacity = op;
+          element.style.filter = "alpha(opacity=" + op * 100 + ")";
+          op += op * 0.1;
+        }, 10);
+      };
+
+      fadeIn(title);
+      setTimeout(function () {
+        fadeIn(text);
+      }, 500);
+      setTimeout(function () {
+        fadeIn(image);
+      }, 1000);
+    });
+  </script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

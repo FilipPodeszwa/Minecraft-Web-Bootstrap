@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herní kvíz</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="pozadi">
+  <nav class="navbar navbar-expand-lg navbar-light custom_navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand animation" href="../index.html"><img src="../img/travovy_blok_logo.png"
+          alt="Blok trávy v Minecraftu" width="70" height="65"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link navbar_rozcestnik" href="../pro_zacatecniky/index.html">Pro začátečníky</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="../tipy_a_triky/index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Užitečné tipy a triky</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../zajimavosti/index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Zajímavosti</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" style="color: #292929;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 95%;">Herní kvíz</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" style="color: #292929;
+              font-family: 'Noto Sans', sans-serif;
+              font-size: 95%;">
+              <strong>O webu</strong>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="../autor/index.html" style="color: #292929;
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 95%;">Autor</a></li>
+              <li><a class="dropdown-item" href="../autorska_prava/index.html" style="color: #292929;
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 95%;">Autorská práva</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="page-header gradient">
+    <div class="container pt-5 pb-3">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-md-6">
+          <h2 class="nadpisy_stranek animace-vlevo">Kvíz</h2>
+          <p class="animace_vlevo">Teď si vyzkoušíme, na jaké úrovni jsou vyše znalosti Minecraftu!</p>
+        </div>
+        <div class="col-md-6"><img src="../img/steve.png" alt="Steve" class="animace_vpravo"></div>
+      </div>
+    </div>
+  </header>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#545454" fill-opacity="10%"
+      d="M0,256L0,96L144,96L144,64L288,64L288,192L432,192L432,128L576,128L576,256L720,256L720,224L864,224L864,192L1008,192L1008,96L1152,96L1152,192L1296,192L1296,32L1440,32L1440,0L1296,0L1296,0L1152,0L1152,0L1008,0L1008,0L864,0L864,0L720,0L720,0L576,0L576,0L432,0L432,0L288,0L288,0L144,0L144,0L0,0L0,0Z">
+    </path>
+  </svg>
+
+
+
+  <div style="height: 50px;"></div>
+
+
+  <div class="container">
+    <div class="quiz-container">
+      <h1 class="nadpis_kvizu">Malý minecraftový kvíz!</h1>
+      <form id="quizForm">
+
+
+        <!-- Otázky -->
+        <div class="mb-3">
+          <label id="question1" class="form-label kviz_otazky_nadpisy">1) Jak se jmenuje tvůrce Minecraftu "Notch"
+            vlastním
+            jménem?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question1" id="q1option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q1option1">Magnus Persson</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question1" id="q1option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q1option2">Markus Persson</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question1" id="q1option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q1option3">Malucs Persson</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label id="question2" class="form-label kviz_otazky_nadpisy">2) Minecraft je hra:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question2" id="q2option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q2option1">Arkádová</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question2" id="q2option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q2option2">Sandboxová</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question2" id="q2option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q2option3">Příběhová</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question3" class="form-label kviz_otazky_nadpisy">3) Kolik je zapotřebí minimálně RAM pro
+            spuštění
+            Minecraftu?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question3" id="q3option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q3option1">2 GB</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question3" id="q3option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q3option2">8 GB</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question3" id="q3option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q3option3">4 GB</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question4" class="form-label kviz_otazky_nadpisy">4) Jaká nejnižší verze Minecraftu podporuje
+            Ray Tracing
+            (RTX)?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question4" id="q4option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q4option1">1.16.3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question4" id="q4option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q4option2">1.16.2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question4" id="q4option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q4option3">1.16.4</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question5" class="form-label kviz_otazky_nadpisy">5) Na čem závisí rychlost generování vašeho
+            světa?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question5" id="q5option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q5option1">RAM a grafická karta</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question5" id="q5option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q5option2">disk a grafická karta</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question5" id="q5option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q5option3">procesor a
+              disk</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question6" class="form-label kviz_otazky_nadpisy">6) Po vygenerování nového světa se objevíme:
+          </label>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question6" id="q6option1" value="option1"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q6option1">na náhodném místě</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question6" id="q6option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q6option2">ve vesnici</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question6" id="q6option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q6option3">na pláni</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question7" class="form-label kviz_otazky_nadpisy">7) Bloky se ničí pomocí:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question7" id="q7option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q7option1">klávesy "E"</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question7" id="q7option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q7option2">pravého tlačítka myši</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question7" id="q7option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q7option3">levého tlačítka
+              myši</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question8" class="form-label kviz_otazky_nadpisy">8) Věc, bez které se v Minecraftu neobejdete,
+            je:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question8" id="q8option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q8option1">diamantový meč</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question8" id="q8option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q8option2">crafting table</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question8" id="q8option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q8option3">postel</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question9" class="form-label kviz_otazky_nadpisy">9) Kolik kusů vlny potřebujete na výrobu
+            postele v
+            Minecraftu?</label>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question9" id="q9option1" value="option1"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q9option1">3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question9" id="q9option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q9option2">4</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question9" id="q9option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q9option3">5</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question10" class="form-label kviz_otazky_nadpisy">10) Společný název pro všechna NPC v
+            Minecraftu:</label>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question10" id="q10option1" value="option1"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q10option1">mobové</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question10" id="q10option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q10option2">entity</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question10" id="q10option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q10option3">postavy</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question11" class="form-label kviz_otazky_nadpisy">11) Co potřebujete na výrobu
+            pochodně?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question11" id="q11option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q11option1">uhlí, kůži a zapalovač</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question11" id="q11option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q11option2">uhlí a desky</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question11" id="q11option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q11option3">uhlí a tyčku</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question12" class="form-label kviz_otazky_nadpisy">12) Jaký je název pro klasický svět?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question12" id="q12option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q12option1">Nether</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question12" id="q12option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q12option2">Overworld</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question12" id="q12option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q12option3">End</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question13" class="form-label kviz_otazky_nadpisy">13) Koho se Creepeři nejvíce bojí?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question13" id="q13option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q13option1">Kostlivců</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question13" id="q13option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q13option2">Ptáků</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question13" id="q13option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q13option3">Koček</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question14" class="form-label kviz_otazky_nadpisy">14) Kolik potřebujete minimálně kbelíků vody
+            na nekonečný
+            zdroj?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question14" id="q14option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q14option1">1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question14" id="q14option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q14option2">3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question14" id="q14option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q14option3">2</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question15" class="form-label kviz_otazky_nadpisy">15) Do až jak malé díry se vejdete, budete-li
+            se plazit?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question15" id="q15option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q15option1">2x2 bloky</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question15" id="q15option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q15option2">1x1 blok</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question15" id="q15option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q15option3">1x2 bloky</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question16" class="form-label kviz_otazky_nadpisy">16) Nejefektivnější způsob, jak vysušit
+            mokrou houbu:</label>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question16" id="q16option1" value="option1"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q16option1">Položit ji na zem v Netheru</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question16" id="q16option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q16option2">Vypéct v peci</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question16" id="q16option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q16option3">Radši ji
+              nesušit</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question17" class="form-label kviz_otazky_nadpisy">17) Který enchant vám dá více nerostů z jedné
+            rudy?</label>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question17" id="q17option1" value="option1"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q17option1">silk touch</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question17" id="q17option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q17option2">tilk souch</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question17" id="q17option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q17option3">touch</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question18" class="form-label kviz_otazky_nadpisy">18) Co dělá větší explozi než TNT?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question18" id="q18option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q18option1">Creeper</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question18" id="q18option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q18option2">Postel</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question18" id="q18option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q18option3">SuperTNT</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question19" class="form-label kviz_otazky_nadpisy">19) Jeden z nejstarších triků v
+            Minecraftu:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question19" id="q19option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q19option1">Kbelík lávy</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question19" id="q19option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q19option2">Kbelík vody</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question19" id="q19option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q19option3">Kbelík mléka</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question20" class="form-label kviz_otazky_nadpisy">20) Jak zastavit rozzuřeného
+            Endermana?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question20" id="q20option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q20option1">Zaútočit na něj</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question20" id="q20option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q20option2">Nechat ho na pokoji</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question20" id="q20option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q20option3">Dívat se mu do
+              očí</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question21" class="form-label kviz_otazky_nadpisy">21) Líbí se ti tento kvíz?</label>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question21" id="q21option1" value="option1"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q21option1">Ano</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question21" id="q21option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q21option2">Ne</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question21" id="q21option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q21option3">Nechci
+              odpovídat</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question22" class="form-label kviz_otazky_nadpisy">22) Kam vždy ukazují dýňové stopky?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question22" id="q22option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q22option1">na jih</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question22" id="q22option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q22option2">na sever</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question22" id="q22option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q22option3">na východ</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question23" class="form-label kviz_otazky_nadpisy">23) Který enchant v enchant table je vždy
+            první pro luk?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question23" id="q23option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q23option1">Sharpness I</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question23" id="q23option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q23option2">Power I</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question23" id="q23option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q23option3">Efficiency I</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question24" class="form-label kviz_otazky_nadpisy">24) Nejrychlejší krumpáč v
+            Minecraftu?</label>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question24" id="q24option1" value="option1"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q24option1">Zlatý</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question24" id="q24option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q24option2">Diamantový</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question24" id="q24option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q24option3">Netheritový</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question25" class="form-label kviz_otazky_nadpisy">25) Co se stane, když postavíte sněhuláka ve
+            vodě?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question25" id="q25option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q25option1">Vůbec nic</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question25" id="q25option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q25option2">Stane se extra silným</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question25" id="q25option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q25option3">Roztaje</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question26" class="form-label kviz_otazky_nadpisy">26) Jak se dá uchovat voda v Netheru?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question26" id="q26option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q26option1">V houbě</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question26" id="q26option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q26option2">V kbelíku</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question26" id="q26option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q26option3">V kotlíku</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question27" class="form-label kviz_otazky_nadpisy">27) Úplně první název hry Minecraft:</label>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question27" id="q27option1" value="option1"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q27option1">Cave Game</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question27" id="q27option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q27option2">Minecraft: Order of the Stone </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question27" id="q27option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q27option3">Scary Game</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question28" class="form-label kviz_otazky_nadpisy">28) Kolik kopií Minecraftu se celkem
+            prodalo?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question28" id="q28option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q28option1">239 000 000</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question28" id="q28option2" value="option2"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl" for="q28option2">238 000 000</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question28" id="q28option3" value="option3">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q28option3">1 000 000 000</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question29" class="form-label kviz_otazky_nadpisy">29) Předchůdci smaragdů (emeraldů):</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question29" id="q29option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q29option1">Cobblestone</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question29" id="q29option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q29option2">Redstone</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question29" id="q29option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q29option3">Rubíny</label>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label id="question30" class="form-label kviz_otazky_nadpisy">30) V jakém jazyce byl naprogramován
+            Minecraft?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question30" id="q30option1" value="option1">
+            <label class="form-check-label kviz_odpovedi_styl" for="q30option1">C++</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="question30" id="q30option2" value="option2">
+            <label class="form-check-label kviz_odpovedi_styl" for="q30option2">C#</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input answer-button" type="radio" name="question30" id="q30option3" value="option3"
+              data-correct="true" onclick="increaseScore()">
+            <label class="form-check-label kviz_odpovedi_styl posledni_odpoved" for="q30option3">Java</label>
+          </div>
+        </div>
+        <button class="tlacitko_vyhodnotit" type="button" onclick="evaluateQuiz()">Vyhodnotit</button>
+      </form>
+
+      <div id="score"></div>
+    </div>
+  </div>
+
+  <footer class="text-center text-white fixed-bottom" style="background: rgb(117, 117, 120);
+  background: radial-gradient(circle, rgba(117, 117, 120, 1) 0%,
+          rgba(84, 84, 84, 1) 86%);">
+
+    <div class="text-center p-2">
+      © PanVat 2023
+
+    </div>
+
+  </footer>
+
+  <div style="height: 50px;"></div>
+
+  <script>document.addEventListener("DOMContentLoaded", function () {
+      var dropdownToggle = document.querySelector(".navbar .dropdown-toggle");
+
+      dropdownToggle.addEventListener("click", function () {
+        var dropdownMenu = this.nextElementSibling;
+
+        if (dropdownMenu.style.display === "block") {
+          dropdownMenu.style.display = "none";
+        } else {
+          dropdownMenu.style.display = "block";
+        }
+      });
+    });</script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".anim-left, .anim-right");
+      elements.forEach(function (element) {
+        element.classList.add("anim-show");
+      });
+    });</script>
+
+  <!--Animace headeru-->>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const title = document.querySelector(".nadpisy_stranek");
+      const text = document.querySelector(".animace_vlevo");
+      const image = document.querySelector(".animace_vpravo");
+
+      title.style.opacity = 0;
+      text.style.opacity = 0;
+      image.style.opacity = 0;
+
+      const fadeIn = function (element) {
+        let op = 0.1;  // starting opacity
+        const timer = setInterval(function () {
+          if (op >= 1) {
+            clearInterval(timer);
+          }
+          element.style.opacity = op;
+          element.style.filter = "alpha(opacity=" + op * 100 + ")";
+          op += op * 0.1;
+        }, 10);
+      };
+
+      fadeIn(title);
+      setTimeout(function () {
+        fadeIn(text);
+      }, 500);
+      setTimeout(function () {
+        fadeIn(image);
+      }, 1000);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    var score = 0; // Inicializace skóre na 0
+    var answeredQuestions = {}; // Objekt pro sledování již zodpovězených otázek
+
+    function increaseScore() {
+      var currentQuestion = event.target.name; // Získání jména aktuální otázky
+      if (!answeredQuestions[currentQuestion]) {
+        score += 1; // Zvýšení skóre o 1, pouze pokud otázka ještě nebyla zodpovězena
+        answeredQuestions[currentQuestion] = true; // Označení otázky jako zodpovězené
+      }
+    }
+
+    function evaluateQuiz() {
+      var correctAnswers = 0; // Inicializace počítadla správných odpovědí
+
+      // Získání všech tlačítek odpovědí
+      var answerButtons = document.getElementsByClassName("answer-button");
+
+      // Procházení tlačítek odpovědí
+      for (var i = 0; i < answerButtons.length; i++) {
+        var button = answerButtons[i];
+        var isCorrect = button.getAttribute("data-correct"); // Získání hodnoty atributu data-correct
+
+        if (isCorrect === "true") {
+          correctAnswers += 1; // Zvýšení počítadla správných odpovědí o 1
+        }
+      }
+
+      // Zobrazení celkového skóre a počtu správných odpovědí
+      alert("Celkové skóre: " + score);
+    }
+
+    function showCorrectAnswers() {
+      var correctAnswers = document.querySelectorAll(".answer-button[data-correct='true']");
+      var correctAnswersText = "";
+
+      for (var i = 0; i < correctAnswers.length; i++) {
+        var answer = correctAnswers[i].nextSibling.textContent.trim();
+        correctAnswersText += "- " + answer + "\n";
+      }
+
+      alert("Správné odpovědi:\n" + correctAnswersText);
+    }
+
+  </script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
